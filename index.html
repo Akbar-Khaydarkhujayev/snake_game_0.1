@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Snake Game 0.1</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Snake Game</h1>
+      <h5>Score: <span id="score">0</span></h5>
+    </header>
+
+    <main id="main">
+      <div id="layer">
+        <p id="overHeader">Game Over</p>
+        <p id="overText">Score: <span id="overAllScore"></span></p>
+        <button class="btn" onclick="reload()">Restart</button>
+      </div>
+      <div id="startLayer">
+        <input
+          type="radio"
+          name="difficulty"
+          class="check"
+          id="checkbox1"
+        /><label for="checkbox1">Easy</label><br /><br />
+        <input
+          type="radio"
+          name="difficulty"
+          class="check"
+          id="checkbox2"
+        /><label for="checkbox2">Medium</label><br /><br />
+        <input
+          type="radio"
+          name="difficulty"
+          class="check"
+          id="checkbox3"
+        /><label for="checkbox3">Hard</label><br />
+        <button onclick="start()" id="startBtn">Start</button>
+      </div>
+      <div class="snake"></div>
+      <div class="snake"></div>
+      <div class="snake"></div>
+      <div class="snake"></div>
+      <div class="snake"></div>
+      <div class="apple" id="apple">
+        <i class="fa-solid fa-apple-whole"></i>
+      </div>
+    </main>
+
+    <script src="js.js"></script>
+  </body>
+</html>
